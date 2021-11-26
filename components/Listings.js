@@ -1,24 +1,37 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useReducer } from "react";
 import useHttp from "../hooks/use-http";
 import styles from "../styles/Listings.module.css";
 
 const ACTIONS = ["View", "Reply"];
+
+const initialTitle = '';
+const reducer = (title, action) => {
+	switch (action.type) {
+		case ACTIONS[0]:
+			return console.log(action.type,":", action.value);    
+		case ACTIONS[1]:
+      return console.log(action.type,":", action.value);  
+		default:
+			return null;
+	}
+}
 
 const Listing = (props) => {
   // TODO
   // This should be the component which renders an individual listing to the page
   /**
    * Developer notes
-   * 1. I would have preferred to make it a separate component but with time
+   * 1. I would have preferred to make it a separate component but with time constraints I left the component her 
    */
 
-  const viewListing = (title) => {
-    console.log("View:", title);
-  };
+   const [title, dispatch] = useReducer(reducer, initialTitle);
 
-  const reply = (title) => {
-    console.log("Reply:", title);
-  };
+   useCallback(()=>{
+     console.log(title);
+   },[title]);
+
+  // Note - 1. I have added tab indices so that the elements are accessible via keyboard using the tabs
+
   return (
     <div role="listitem" className={styles.listings} tabIndex="0">
       <article>
@@ -52,16 +65,16 @@ const Listing = (props) => {
         <div className={styles.listings__buttons__container}>
           <button
             className={styles.cta__button}
-            onClick={() => {
-              viewListing(props.title);
+            onClick={()=>{
+              dispatch({type: ACTIONS[0],value: props.title})
             }}
           >
             View
           </button>
           <button
             className={styles.cta__button}
-            onClick={() => {
-              reply(props.title);
+            onClick={()=>{
+              dispatch({type: ACTIONS[1],value: props.title})
             }}
           >
             Reply
@@ -73,8 +86,8 @@ const Listing = (props) => {
 };
 
 const Listings = (props) => {
-  // Method to call to format the currency value into a currency data type
 
+  // Method to call to format the currency value into a currency data type
   const formatAsCurrency = useCallback((data) => {
     // TODO
     let transformedData = [...data];
@@ -100,6 +113,12 @@ const Listings = (props) => {
   }, [fetchListings]);
   // then render the result as set of listings as per the design mocks
   // check props passed in from parent for other values that you may need to use
+
+// Notes
+// 1. I have added the criteria for following scenarios 
+//  a. If the API throws an error
+//  b. If the API returns no value 
+//  c. If the API is taking long to respond
 
   return (
     <div>
