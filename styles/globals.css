@@ -15,3 +15,6 @@ a {
   box-sizing: border-box;
 }
 
+div .name {
+  color: var(--color-error-dark);
+}

@@ -11,6 +11,7 @@ function randomNumber(min, max){
 
 const data = [
     {
+        id : 1,
         title: "2005 Ferrari F430 Convertible",
         description:
             "We are proud to offer one of the rarest modern-day Ferrari's in existence today.There are only approximately 130 RIGHT HAND DRIVE 6 SPEED GATED MANUAL F430 SPIDERS IN THE WORLD",
@@ -19,6 +20,7 @@ const data = [
         location: "Sydney, NSW",
     },
     {
+        id : 2,
         title: "2006 Ferrari F430 Spider Black 6 Speed Formula One Convertible",
         description:
             "Traralgon Car City is located in Victoria, 1.5 hrs from Melbourne down the South Eastern freeway. We are the largest non-franchise dealership in the Gippsland Region, locally owned and operated for over 30 years. Our team have the knowledge and the expertise to help you find the right car to perfectly suit your needs.",
@@ -27,6 +29,7 @@ const data = [
         location: "Taralgon, VIC",
     },
     {
+        id : 3,
         title:
             "2000 Ferrari 360 Modena F1 Blue 6 Speed Seq Manual Auto-Clutch Coupe",
         description:
@@ -36,6 +39,7 @@ const data = [
         location: "Perth, WA",
     },
     {
+        id : 4,
         title: "1979 Ferrari 308 GTB Red 5 Speed Manual Coupe",
         description:
             "1979 Australian Delivered Ferrari 308 GTB in the World Famous Rosso Corsa Red with Black Leather Trim - Matching Numbers 2.9L V8 Engine - Classic 5 Speed Manual Gated Transmission - Very low 40,817KMs",
@@ -44,6 +48,7 @@ const data = [
         location: "Hobart, TAS",
     },
     {
+        id : 5,
         title: "1997 Ferrari F355 GTS Manual Coupe",
         description:
             "For sales this beautiful rare F355 GTS 6 speed manual gearbox is in outstanding and perfect original condition, full Ferrari service history, only 1000km, done since last service, fully documented service history.",
@@ -52,6 +57,7 @@ const data = [
         location: "Sydney, NSW",
     },
     {
+        id : 6,
         title: "Ferrari spare parts",
         description:
             "Wanted to buy: spare parts for my Ferrari. Will travel to inspect",

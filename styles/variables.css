@@ -14,8 +14,6 @@
     --font-size-medium: 20px;
     --font-size-large: 24px;
     --font-size-x-large: 28px;
-    --font-weight-400:400;
-    --font-weight-600:600;
 
     /* colours */
     --color-page-bg: #fafafa;
@@ -29,20 +27,4 @@
     --color-borders: #dddddd;
     --color-error-light: #ead2d2;
     --color-error-dark: #790000;
-
-    /* lines */
-    --line-height-normal: 20px;
-    --line-height-small: 15px;
-
-    /*margins */
-    --margin-x-x-small:4px;
-    --margin-x-small: 6px;
-    --margin-small: 10px;
-    --margin-medium: 14px;
-
-    /* paddings */
-    --padding-x-small:6px;
-    --padding-small:10px;
-
-
 }
