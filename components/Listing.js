@@ -1,6 +1,23 @@
+import { useReducer } from 'react';
 import styles from '../styles/Listings.module.css';
 
+const ACTIONS = ["View", "Reply"];
+
+const reducer = (title, action) => {
+	switch (action.type) {
+		case ACTIONS[0]:
+			return console.log(action.type,":", action.value);    
+		case ACTIONS[1]:
+      return console.log(action.type,":", action.value);  
+		default:
+			return null;
+	}
+}
+
 const Listing = (props)=> {
+  const initialTitle = '';
+  const [title, dispatch] = useReducer(reducer, initialTitle);
+
     return (
         <div role="listitem" className={styles.listings} tabIndex="0">
       <article>
