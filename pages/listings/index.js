@@ -4,11 +4,10 @@ import styles from "../../styles/Listings.module.css";
 
 const LISTINGS_ENDPOINT = "http://localhost:3000/api/listings";
 
-function Listings({ cars }) {
+function Listings({ cars, keyword, location }) {
   //   listings is the local state, set to show the value of listings
   const [listings, setListings] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
 
   return (
     <div>
@@ -49,11 +48,26 @@ export default Listings;
 export async function getServerSideProps() {
   const response = await fetch(LISTINGS_ENDPOINT);
   const data = await response.json();
-  console.log(data);
-
+  //   transform the data
+ const transformedData = formatAsCurrency(data);
   return {
     props: {
-      cars: data,
+      cars: transformedData,
+      keyword: "Ferrari",
+      location: "Australia",
     },
   };
 }
+
+const formatAsCurrency = (data) => {
+    // TODO
+    let transformedData = [...data];
+    transformedData.forEach((listing) => {
+      listing.price = Intl.NumberFormat("en-IN", {
+        style: "currency",
+        currency: "AUD",
+      }).format(listing.price);
+    });
+   
+    return transformedData;
+  }
