@@ -1,12 +1,6 @@
-## Gumtree AU Front-End Code Test
+## About Applicatioj 
 
-Hello! :wave:
-
-This is the code test for Front-End Developer candidates at Gumtree Australia.
-
-This test is designed to be a simple real-world example. The project has been completely scaffolded for you, and the code you need to write yourself is minimal, and marked clearly with `// TODO` comments.
-
-The goal is for you to showcase your ability to write Javascript, HTML and CSS in a real-ish world scenario.
+This is a FE application built on NEXT.js with a mock end point. The application is simple demonstration of server side rendering skills along with error handling 
 
 ## The Task
 
@@ -27,11 +21,11 @@ You’ll need Node.js version `10.13` or later, a text editor and terminal app f
 - Install the dependencies `npm install`
 - Start the development server `npm run dev`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser and you should see a blank page.
+Open [http://localhost:3000/listings](http://localhost:3000) with your browser and you will see the listings of cars 
 
 You can also open [http://localhost:3000/api/listings](http://localhost:3000/api/listings) with your browser and see the response from the API endpoint (the results are a randomised number of listings, and order).
 
-## Requirements
+## The task Requirements/ Acceptance criteria is:
 
 Complete the `Listings` component(s) so that it correctly render the results returned from the API endpoint.
 
@@ -45,7 +39,7 @@ Complete the `Listings` component(s) so that it correctly render the results ret
 - Do not include any extra dependencies. The project has everything you need to complete it.
 - The only two files you need to edit are `components/Listings.js` and `public/css/listings.css`. There is no need to edit anything else.
 
-## Where should you start?
+## How did I start?
 
 Review the mocks in `design-mocks` directory. There is a mock design for desktop, tablet and mobile.
 
@@ -58,7 +52,7 @@ The logical order to complete the tasks are:
 
 You do not need to use anything but plain ol' CSS for styling. There are some root level [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) declared in `public/css/variables.css` which you can, and should, use to help save you time.
 
-## Tips
+## Tips to understand the dev process 
 
 -   Even though the API is a mock, treat it as you would a production API. What happens when there are no results? Or the request fails?
 -   The API server is temperamental - 10% of the time it will return an error, and may take up to 3 seconds to return a response. Make sure the Frontend can handle it!
