@@ -1,4 +1,4 @@
-## About Applicatioj 
+## About Application
 
 This is a FE application built on NEXT.js with a mock end point. The application is simple demonstration of server side rendering skills along with error handling 
 
@@ -8,7 +8,6 @@ The task is to complete a mock Search Results Page.
 
 The project includes some mock designs, an already working single page application, and an API endpoint which returns mock results.
 
-You should only spend 2 hours maximum on this test - just complete as much as you can in that time. It is absolutley not neccessary to finish every part of the task, so please don't feel like you need spend more time than you have available.
 
 ## Getting Started
 
